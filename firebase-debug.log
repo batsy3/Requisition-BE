@@ -1,0 +1,53 @@
+[debug] [2024-05-12T18:24:39.739Z] ----------------------------------------------------------------------
+[debug] [2024-05-12T18:24:39.743Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jacks\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init firestore
+[debug] [2024-05-12T18:24:39.744Z] CLI Version:   13.8.3
+[debug] [2024-05-12T18:24:39.744Z] Platform:      win32
+[debug] [2024-05-12T18:24:39.744Z] Node Version:  v21.7.1
+[debug] [2024-05-12T18:24:39.744Z] Time:          Sun May 12 2024 20:24:39 GMT+0200 (Central Africa Time)
+[debug] [2024-05-12T18:24:39.744Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-12T18:24:39.795Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-12T18:24:39.795Z] > authorizing via signed-in user (dvdokuku@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\jacks\OneDrive\Documents\Github\Requisition App\BE
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-05-12T18:24:42.173Z] Using project from CLI flag: bolbe-dev
+[debug] [2024-05-12T18:24:42.184Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bolbe-dev [none]
+[debug] [2024-05-12T18:24:43.878Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bolbe-dev 200
+[debug] [2024-05-12T18:24:43.878Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bolbe-dev {"projectId":"bolbe-dev","projectNumber":"553036248855","displayName":"BOLBE-DEV","name":"projects/bolbe-dev","resources":{"hostingSite":"bolbe-dev"},"state":"ACTIVE","etag":"1_48be36c7-2b1b-41a6-abe9-4012a5987eea"}
+[info] i  Using project bolbe-dev (BOLBE-DEV) 
+[info] 
+=== Firestore Setup
+[debug] [2024-05-12T18:24:43.881Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/bolbe-dev/services/firestore.googleapis.com [none]
+[debug] [2024-05-12T18:24:43.881Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/bolbe-dev/services/firestore.googleapis.com x-goog-quota-user=projects/bolbe-dev
+[debug] [2024-05-12T18:24:46.692Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/bolbe-dev/services/firestore.googleapis.com 200
+[debug] [2024-05-12T18:24:46.692Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/bolbe-dev/services/firestore.googleapis.com [omitted]
+[debug] [2024-05-12T18:24:46.692Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/bolbe-dev/databases/(default) [none]
+[debug] [2024-05-12T18:24:49.089Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/bolbe-dev/databases/(default) 200
+[debug] [2024-05-12T18:24:49.089Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/bolbe-dev/databases/(default) {"name":"projects/bolbe-dev/databases/(default)","uid":"2d88678a-fdb8-42c5-baf1-2393699c278a","createTime":"2024-05-12T17:42:15.588661Z","updateTime":"2024-05-12T17:42:15.588661Z","locationId":"eur3","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2024-05-12T17:42:15.588661Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"e","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"IN/H5JHeiIYDMLWO+tDUiIYD"}
+[debug] [2024-05-12T18:24:49.089Z] database_type: FIRESTORE_NATIVE
+[debug] [2024-05-12T18:24:49.089Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-12T18:24:49.089Z] > authorizing via signed-in user (dvdokuku@gmail.com)
+[debug] [2024-05-12T18:24:49.089Z] [iam] checking project bolbe-dev for permissions ["firebase.projects.get"]
+[debug] [2024-05-12T18:24:49.090Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/bolbe-dev:testIamPermissions [none]
+[debug] [2024-05-12T18:24:49.090Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/bolbe-dev:testIamPermissions x-goog-quota-user=projects/bolbe-dev
+[debug] [2024-05-12T18:24:49.090Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bolbe-dev:testIamPermissions {"permissions":["firebase.projects.get"]}
