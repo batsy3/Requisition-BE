@@ -1,21 +1,18 @@
+import * as functions from "firebase-functions";
+import * as express from "express";
+import usersRouter from "./Users/routes";
+import { FunctinoParser, FunctionParseroptions } from "./functionParser";
 
-// The Firebase Admin SDK to access Firestore.
-const { initializeApp } = require("firebase-admin/app");
-const { getFirestore } = require("firebase-admin/firestore");
+const exportObject: any = {};
+const functionParseroptions: FunctionParseroptions = {
+  exports: exportObject,
+  rootPath: __dirname,
+  verbose: true,
+  options: {
+    enableCors: true,
+  },
+};
 
-initializeApp();
-import { FunctionParser } from "firebase-backend";
-import admin = require("firebase-admin");
-
-// Initialise the admin functionality for the firebase backend
-admin.initializeApp();
-
-
-// if (process.env.FUNCTIONS_EMULATOR) {
-//   console.log("We are running emulators locally.");
-
-//   const populator = new FakeDataPopulator(firestoreDatabase);
-//   populator.generateFakeData();
-// }
-
-// exports = new FunctionParser(__dirname, ).exports;
+//  create instance of function parser
+const functionParser = new FunctinoParser(functionParseroptions);
+exports = functionParser.exports;
